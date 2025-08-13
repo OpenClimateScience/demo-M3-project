@@ -70,7 +70,7 @@ def main(download = False):
             .assign_coords(time = ('time', [year]))
         et_data.append(ds_et_basin)
 
-    xr.concat(et_data, dim = 'time').to_netcdf(OUTPUT_FILE)
+    xr.Dataset({'ET': xr.concat(et_data, dim = 'time')}).to_netcdf(OUTPUT_FILE)
 
 
 if __name__ == '__main__':
