@@ -19,9 +19,9 @@ Where $P$ is precipitation, $E$ is evapotranspiration (ET), $R$ is runoff, and $
 Contents
 --------------
 
-- Step 1: Compute monthly precipitation for the basin, based on GPM IMERG-Final data
-- Step 2: Compute monthly ET for the basin, based on MODIS MOD16 data
-- Step 3: Get the runoff data and compute change in storage
+- Step 1: Compute monthly precipitation for the basin, based on GPM IMERG-Final data: `h2o/scripts/step01_IMERG-Final_monthly_precipitation.py`
+- Step 2: Compute monthly ET for the basin, based on MODIS MOD16 data: `h2o/scripts/step02_MODIS_MOD16_monthly_ET.py`
+- Step 3: Get the runoff data and compute change in storage: `h2o/scripts/step03_HYSETS_monthly_runoff_and_change_in_storage.py`
 
 
 Setup and Installation
