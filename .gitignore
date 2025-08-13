@@ -1,0 +1,7 @@
+h2o/data/shp
+h2o/processed
+h2o/data/*.nc
+h2o/data/*/*.HDF5
+h2o/data/*/*.hdf
+h2o/data/*/*.tiff
+h2o/data/*/*.nc4
