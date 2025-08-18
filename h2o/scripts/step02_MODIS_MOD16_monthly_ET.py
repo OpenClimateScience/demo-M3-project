@@ -1,6 +1,11 @@
 '''
 Computes monthly evapotranspiration (ET) for a basin (represented in a
-Shapefile), based on MOD16 ET data.
+Shapefile), based on MOD16 ET data. To execute this script:
+
+    python step02_MODIS_MOD16_monthly_ET.py true
+
+Where the argument "true" will cause the script to download the required data
+from NASA Earthdata Search.
 '''
 
 import glob

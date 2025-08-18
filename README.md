@@ -33,6 +33,16 @@ The Python software dependencies can be installed using `pip`:
 pip install -r REQUIREMENTS
 ```
 
+Once the dependencies are installed, you can calculate the final budget by executing these scripts in order:
+
+```sh
+python h2o/scripts/step01_IMERG-Final_monthly_precipitation.py true
+python h2o/scripts/step02_MODIS_MOD16_monthly_ET.py true
+python h2o/scripts/step03_HYSETS_monthly_runoff_and_change_in_storage.py
+```
+
+Where the argument `true` provided in steps 1 and 2 will ensure that the necessary datasets are downloaded.
+
 
 Disclaimer
 --------------

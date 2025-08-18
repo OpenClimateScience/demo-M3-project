@@ -1,8 +1,14 @@
 '''
 Computes monthly precipitation data for a basin (represented in a Shapefile)
-based on IMERG-Final data.
+based on IMERG-Final data. To execute this script:
+
+    python step01_IMERG-Final_monthly_precipitation.py true
+
+Where the argument "true" will cause the script to download the required data
+from NASA Earthdata Search.
 '''
 
+import sys
 import calendar
 import datetime
 import glob
@@ -21,6 +27,9 @@ BASIN_FILE = CWD.parent.joinpath('data/shp/YellowstoneRiver_drainage_WSG84.shp')
 def main(download = False):
     auth = earthaccess.login()
     basin = geopandas.read_file(BASIN_FILE)
+
+    if len(sys.argv) > 1:
+        download = (sys.argv[1].lower() == 'true')
 
     if download:
         results = earthaccess.search_data(
