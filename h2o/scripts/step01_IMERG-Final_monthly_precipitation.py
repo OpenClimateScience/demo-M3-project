@@ -28,6 +28,8 @@ def main(download = False):
     auth = earthaccess.login()
     basin = geopandas.read_file(BASIN_FILE)
 
+    # Will download the data using earthaccess only if "true" is provided as
+    #   an argument
     if len(sys.argv) > 1:
         download = (sys.argv[1].lower() == 'true')
 
